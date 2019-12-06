@@ -1,0 +1,24 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: zuul-gateway
+zuul:
+  ignoredServices: '*'
+  prefix: /dev
+  routes:
+    ticket:
+      path: /VO/**
+      service-id: VO
+    user:
+      path: /user/**
+      service-id: user
+  retryable: true
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/

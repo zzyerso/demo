@@ -1,0 +1,6 @@
+com\yss\demo\ticket\VO\TicketInfoVo.class
+com\yss\demo\ticket\client\UserFeignClient.class
+com\yss\demo\user\client\TicketFeignClient.class
+com\yss\demo\user\VO\UserDetailVo.class
+com\yss\demo\user\VO\UserInfoVo.class
+com\yss\demo\ticket\VO\TicketDetailVo.class

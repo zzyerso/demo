@@ -1,0 +1,19 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: gateway-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true           #开启服务自动发现注册功能
+          lowerCaseServiceId: true        #使用小写serviceId  默认是大写的
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
